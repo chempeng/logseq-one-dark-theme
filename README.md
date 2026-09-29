@@ -2,6 +2,8 @@
 
 An unofficial dark theme for Logseq inspired by [Binaryify's One Dark Pro](https://github.com/Binaryify/OneDark-Pro). It styles the interface, notes, embeds, and code editor.
 
+![One Dark Pro theme preview](preview.jpg)
+
 ## Install
 
 After the theme is listed in the Logseq Marketplace, open **Plugins → Marketplace → Themes**, search for **One Dark Pro**, and install it. Then select **One Dark Pro** from Logseq's theme menu.
