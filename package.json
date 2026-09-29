@@ -1,20 +1,20 @@
 {
   "name": "logseq-one-dark-theme",
   "version": "0.1.0",
-  "description": "A quiet One Dark inspired theme for Logseq, with optional Agenda styling.",
+  "description": "An unofficial One Dark Pro theme for Logseq.",
   "license": "MIT",
   "keywords": ["logseq", "logseq-theme", "one-dark", "dark-theme"],
-  "title": "One Dark Reading",
+  "title": "One Dark Pro",
   "effect": false,
   "logseq": {
     "id": "one_dark_reading_theme",
-    "title": "One Dark Reading",
+    "title": "One Dark Pro",
     "icon": "./icon.svg",
     "themes": [
       {
-        "name": "One Dark Reading",
+        "name": "One Dark Pro",
         "url": "./theme.css",
-        "description": "One Dark palette for reading and writing, with Agenda compatibility",
+        "description": "One Dark Pro colors for Logseq",
         "mode": "dark"
       }
     ]
