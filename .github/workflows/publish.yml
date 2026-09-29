@@ -1,0 +1,21 @@
+name: Publish theme
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package installable theme
+        run: |
+          archive="logseq-one-dark-theme-${GITHUB_REF_NAME}.zip"
+          zip -r "$archive" package.json theme.css icon.svg tomato-outline.woff2 LICENSE NOTICE.md LICENSES
+          gh release upload "$GITHUB_REF_NAME" "$archive" --clobber
+        env:
+          GH_TOKEN: ${{ github.token }}

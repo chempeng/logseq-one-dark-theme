@@ -1,0 +1,380 @@
+/* One Dark Reading for Logseq. Edit this file directly. */
+/* Palette */
+/* One Dark Reading: edit these tokens to retune the entire theme. */
+.dark-theme,
+html[data-theme="dark"],
+html[data-theme="dark"][data-color] {
+  --od-bg: #282c34;
+  --od-panel: #21252b;
+  --od-raised: #2c313a;
+  --od-hover: #343a44;
+  --od-selection: #3e4451;
+  --od-code-bg: #252a32;
+  --od-code-gutter: #22272e;
+  --od-code-active-line: #35404d;
+  --od-code-selection: #536d8e;
+  --od-embed-bg: #303640;
+  --od-border: #3e4451;
+  --od-border-strong: #4b5263;
+  --od-text: #abb2bf;
+  --od-text-bright: #c8ccd4;
+  --od-text-muted: #828997;
+  --od-muted: #5c6370;
+  --od-cyan: #56b6c2;
+  --od-blue: #61afef;
+  --od-purple: #c678dd;
+  --od-green: #98c379;
+  --od-orange: #d19a66;
+  --od-red: #e06c75;
+  --od-task: #8aa5aa;
+  --od-yellow: #e5c07b;
+  --od-green-soft: #8fa876;
+  --od-green-border: #667a5c;
+  --od-button-bg: #404754;
+
+  --ls-page-title-size: 24px;
+  --ls-primary-background-color: var(--od-bg);
+  --ls-secondary-background-color: var(--od-panel);
+  --ls-tertiary-background-color: var(--od-raised);
+  --ls-quaternary-background-color: var(--od-selection);
+  --ls-table-tr-even-background-color: var(--od-raised);
+  --ls-block-properties-background-color: var(--od-panel);
+  --ls-page-properties-background-color: var(--od-panel);
+  --ls-search-background-color: var(--od-panel);
+  --ls-slide-background-color: var(--od-bg);
+  --ls-primary-text-color: var(--od-text);
+  --ls-secondary-text-color: var(--od-text-muted);
+  --ls-title-text-color: var(--od-text-bright);
+  --ls-link-text-color: var(--od-cyan);
+  --ls-link-text-hover-color: var(--od-blue);
+  --ls-link-ref-text-color: var(--od-cyan);
+  --ls-link-ref-text-hover-color: var(--od-blue);
+  --ls-block-ref-link-text-color: var(--od-cyan);
+  --ls-anchor-link-text-color: var(--od-cyan);
+  --ls-anchor-link-text-color-hover: var(--od-blue);
+  --ls-tag-text-color: var(--od-cyan);
+  --ls-tag-text-hover-color: var(--od-blue);
+  --ls-border-color: var(--od-border);
+  --ls-secondary-border-color: var(--od-border-strong);
+  --ls-tertiary-border-color: var(--od-hover);
+  --ls-guideline-color: var(--od-border);
+  --ls-page-blockquote-bg-color: var(--od-raised);
+  --ls-page-blockquote-color: var(--od-text);
+  --ls-page-blockquote-border-color: var(--od-cyan);
+  --ls-page-mark-color: var(--od-yellow);
+  --ls-page-mark-bg-color: #514832;
+  --ls-block-highlight-color: var(--od-raised);
+  --ls-selection-background-color: var(--od-selection);
+  --ls-selection-text-color: var(--od-text-bright);
+  --ls-menu-hover-color: var(--od-raised);
+  --ls-block-bullet-color: var(--od-muted);
+  --ls-block-bullet-border-color: var(--od-border-strong);
+  --ls-page-checkbox-color: var(--od-task);
+  --ls-page-checkbox-border-color: var(--od-task);
+  --ls-page-inline-code-bg-color: var(--od-panel);
+  --ls-page-inline-code-color: var(--od-yellow);
+  --ls-code-background-color: var(--od-code-bg);
+  --bf-codeblock-background-color: var(--od-code-bg);
+  --ls-scrollbar-foreground-color: var(--od-border-strong);
+  --ls-scrollbar-background-color: var(--od-bg);
+  --ls-scrollbar-thumb-hover-color: var(--od-muted);
+  --ls-active-primary-color: var(--od-cyan);
+  --ls-active-secondary-color: var(--od-blue);
+  --ls-cloze-text-color: var(--od-green-soft);
+  --ls-icon-color: var(--od-text-muted);
+  --ls-pie-bg-color: var(--od-panel);
+  --ls-pie-fg-color: var(--od-cyan);
+  --ls-focus-ring-color: #61afef66;
+  --ls-left-sidebar-text-color: var(--od-text);
+  --ls-button-background-hsl: 219 14% 29%;
+  --ls-button-background: var(--od-button-bg);
+  --color-level-4: #414854;
+  --color-level-5: #4b5261;
+  --color-level-6: #5c6370;
+
+  /* Logseq's newer controls use HSL tokens alongside the --ls-* palette. */
+  --background: 220 13% 18%;
+  --foreground: 219 14% 71%;
+  --accent: 218 13% 24%;
+  --accent-foreground: 220 12% 81%;
+  --primary: 187 47% 55%;
+  --primary-foreground: 220 13% 18%;
+  --ring: 207 82% 66%;
+  --secondary: 219 14% 20%;
+  --secondary-foreground: 219 14% 71%;
+  --muted: 219 14% 20%;
+  --border: 221 13% 28%;
+  --card: 219 14% 20%;
+  --card-foreground: 219 14% 71%;
+  --popover: 216 13% 15%;
+  --input: 221 13% 28%;
+}
+/* Interface */
+/* Core surfaces and prose */
+.dark-theme,
+html[data-theme="dark"],
+html[data-theme="dark"] body { background-color: var(--od-bg); }
+
+.dark-theme blockquote,
+html[data-theme="dark"] blockquote {
+  background-color: var(--od-raised);
+  color: var(--od-text);
+  border-left-color: var(--od-cyan);
+}
+
+.dark-theme :not(pre) > code,
+html[data-theme="dark"] :not(pre) > code {
+  background-color: var(--od-panel);
+  color: var(--od-yellow);
+  border-radius: 4px;
+}
+
+.dark-theme ::selection,
+html[data-theme="dark"] ::selection {
+  background-color: var(--od-selection);
+  color: var(--od-text-bright);
+}
+
+/* Menus, including the three-dot application menu. */
+.dark-theme :is(.menu-links-wrapper, .dropdown-wrapper, .tippy-box, .tippy-content),
+html[data-theme="dark"] :is(.menu-links-wrapper, .dropdown-wrapper, .tippy-box, .tippy-content) {
+  background-color: var(--od-panel) !important;
+  color: var(--od-text) !important;
+  border-color: var(--od-border) !important;
+}
+.dark-theme :is(.menu-links-wrapper, .dropdown-wrapper, .tippy-box),
+html[data-theme="dark"] :is(.menu-links-wrapper, .dropdown-wrapper, .tippy-box) {
+  box-shadow: 0 8px 24px #0005 !important;
+}
+.dark-theme .menu-link,
+html[data-theme="dark"] .menu-link {
+  background-color: transparent !important;
+  color: var(--od-text) !important;
+}
+.dark-theme .menu-link:is(:hover, .chosen),
+html[data-theme="dark"] .menu-link:is(:hover, .chosen) {
+  background-color: var(--od-raised) !important;
+  color: var(--od-text-bright) !important;
+}
+.dark-theme .menu-links-wrapper :is(svg, hr),
+html[data-theme="dark"] .menu-links-wrapper :is(svg, hr) { color: var(--od-text); border-color: var(--od-border); }
+
+/* Bullets and task marker. Keep completed task styles under Logseq's control. */
+.dark-theme .bullet,
+html[data-theme="dark"] .bullet { background-color: var(--od-muted); }
+.dark-theme .bullet-container.bullet-closed,
+html[data-theme="dark"] .bullet-container.bullet-closed {
+  transform: scale(.80);
+  transform-origin: center;
+  background-color: #5c637066 !important;
+}
+.dark-theme .bullet-container.bullet-closed .bullet,
+html[data-theme="dark"] .bullet-container.bullet-closed .bullet { background-color: var(--od-muted) !important; }
+.dark-theme .todo .marker-switch,
+html[data-theme="dark"] .todo .marker-switch { color: var(--od-task) !important; }
+.dark-theme .todo input.form-checkbox,
+html[data-theme="dark"] .todo input.form-checkbox {
+  accent-color: var(--od-task);
+  background-color: var(--od-task) !important;
+  border-color: var(--od-task) !important;
+  opacity: .90;
+}
+
+/* All native scrollbars; the right sidebar is covered as well. */
+.dark-theme,
+html[data-theme="dark"] {
+  /* Logseq's root scrollbar-color prefers --lx-gray-* over --ls-scrollbar-*. */
+  scrollbar-color: var(--od-border-strong) var(--od-bg) !important;
+}
+.dark-theme ::-webkit-scrollbar,
+html[data-theme="dark"] ::-webkit-scrollbar { background-color: var(--od-bg); }
+.dark-theme ::-webkit-scrollbar-thumb,
+html[data-theme="dark"] ::-webkit-scrollbar-thumb,
+.dark-theme.visible-scrollbar ::-webkit-scrollbar-thumb,
+html[data-theme="dark"].custom-scrollbar ::-webkit-scrollbar-thumb {
+  background-color: var(--od-border-strong);
+  border-radius: 8px;
+}
+.dark-theme ::-webkit-scrollbar-thumb:hover,
+html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover,
+.dark-theme.visible-scrollbar ::-webkit-scrollbar-thumb:hover,
+html[data-theme="dark"].custom-scrollbar ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--od-muted);
+}
+
+/* Block and page embeds use their own surface, including in the right sidebar. */
+.dark-theme :is(.embed, .embed-block, .embed-page),
+html[data-theme="dark"] :is(.embed, .embed-block, .embed-page) {
+  background-color: var(--od-embed-bg) !important;
+  border: 1px solid var(--od-border);
+  border-radius: 6px;
+}
+.dark-theme :is(.embed, .embed-block, .embed-page) > .color-level,
+html[data-theme="dark"] :is(.embed, .embed-block, .embed-page) > .color-level {
+  background-color: transparent !important;
+}
+
+/* Right sidebar cards, headings and width handle. */
+.dark-theme .cp__right-sidebar,
+html[data-theme="dark"] .cp__right-sidebar { background-color: var(--od-bg) !important; color: var(--od-text); }
+.dark-theme .cp__right-sidebar .sidebar-item,
+html[data-theme="dark"] .cp__right-sidebar .sidebar-item {
+  background-color: var(--od-panel) !important;
+  border-color: var(--od-border) !important;
+}
+.dark-theme .cp__right-sidebar .sidebar-item.content > div > div:first-of-type,
+html[data-theme="dark"] .cp__right-sidebar .sidebar-item.content > div > div:first-of-type {
+  background-color: var(--od-raised) !important;
+  color: var(--od-text) !important;
+  border-color: var(--od-border) !important;
+}
+.dark-theme .cp__right-sidebar .sidebar-item.content > div > div:first-of-type:hover,
+html[data-theme="dark"] .cp__right-sidebar .sidebar-item.content > div > div:first-of-type:hover {
+  background-color: var(--od-hover) !important;
+}
+.dark-theme .cp__right-sidebar .sidebar-item a,
+html[data-theme="dark"] .cp__right-sidebar .sidebar-item a { color: var(--od-text); }
+.dark-theme .cp__right-sidebar .sidebar-item svg,
+html[data-theme="dark"] .cp__right-sidebar .sidebar-item svg { color: var(--od-text-muted); }
+.dark-theme .cp__right-sidebar-inner .resizer,
+html[data-theme="dark"] .cp__right-sidebar-inner .resizer {
+  background-color: var(--od-border) !important;
+  opacity: 1 !important;
+}
+.dark-theme .cp__right-sidebar-inner .resizer:hover,
+html[data-theme="dark"] .cp__right-sidebar-inner .resizer:hover {
+  background-color: var(--od-muted) !important;
+}
+/* Code editor */
+/* Only paint the editor surface. CodeMirror draws selection and active-line
+   layers behind its pre.CodeMirror-line nodes, so those nodes must stay clear. */
+.dark-theme :is(.extensions__code, .cm-s-solarized.CodeMirror, .cm-s-lsradix.CodeMirror),
+html[data-theme="dark"] :is(.extensions__code, .cm-s-solarized.CodeMirror, .cm-s-lsradix.CodeMirror) {
+  background: var(--od-code-bg) !important;
+  color: var(--od-text) !important;
+  text-shadow: none !important;
+}
+.dark-theme .extensions__code .CodeMirror pre:is(.CodeMirror-line, .CodeMirror-line-like),
+html[data-theme="dark"] .extensions__code .CodeMirror pre:is(.CodeMirror-line, .CodeMirror-line-like) {
+  background: transparent !important;
+}
+.dark-theme :is(.cm-s-solarized, .cm-s-lsradix) :is(.CodeMirror-scroll, .CodeMirror-sizer),
+html[data-theme="dark"] :is(.cm-s-solarized, .cm-s-lsradix) :is(.CodeMirror-scroll, .CodeMirror-sizer) {
+  background-color: var(--od-code-bg) !important;
+}
+.dark-theme :is(.cm-s-solarized, .cm-s-lsradix) .CodeMirror-gutters,
+html[data-theme="dark"] :is(.cm-s-solarized, .cm-s-lsradix) .CodeMirror-gutters {
+  background-color: var(--od-code-gutter) !important;
+  border-right: 1px solid var(--od-border) !important;
+}
+.dark-theme :is(.cm-s-solarized, .cm-s-lsradix) .CodeMirror-linenumber,
+html[data-theme="dark"] :is(.cm-s-solarized, .cm-s-lsradix) .CodeMirror-linenumber { color: var(--od-muted) !important; }
+.dark-theme :is(.cm-s-solarized, .cm-s-lsradix) .CodeMirror-line,
+html[data-theme="dark"] :is(.cm-s-solarized, .cm-s-lsradix) .CodeMirror-line { color: var(--od-text) !important; }
+/* CodeMirror leaves its active-line and selection nodes in the DOM on blur.
+   Only a focused editor should display those layers. */
+.dark-theme :is(.cm-s-solarized, .cm-s-lsradix).CodeMirror.CodeMirror-focused .CodeMirror-activeline-background,
+html[data-theme="dark"] :is(.cm-s-solarized, .cm-s-lsradix).CodeMirror.CodeMirror-focused .CodeMirror-activeline-background,
+.dark-theme .extensions__code .CodeMirror.CodeMirror-focused .CodeMirror-activeline-background,
+html[data-theme="dark"] .extensions__code .CodeMirror.CodeMirror-focused .CodeMirror-activeline-background {
+  background: var(--od-code-active-line) !important;
+}
+.dark-theme :is(.cm-s-solarized, .cm-s-lsradix).CodeMirror.CodeMirror-focused .CodeMirror-selected,
+html[data-theme="dark"] :is(.cm-s-solarized, .cm-s-lsradix).CodeMirror.CodeMirror-focused .CodeMirror-selected,
+.dark-theme .extensions__code .CodeMirror.CodeMirror-focused .CodeMirror-selected,
+html[data-theme="dark"] .extensions__code .CodeMirror.CodeMirror-focused .CodeMirror-selected {
+  background: var(--od-code-selection) !important;
+}
+.dark-theme :is(.cm-s-solarized, .cm-s-lsradix).CodeMirror:not(.CodeMirror-focused) :is(.CodeMirror-activeline-background, .CodeMirror-activeline, .CodeMirror-selected),
+html[data-theme="dark"] :is(.cm-s-solarized, .cm-s-lsradix).CodeMirror:not(.CodeMirror-focused) :is(.CodeMirror-activeline-background, .CodeMirror-activeline, .CodeMirror-selected),
+.dark-theme .extensions__code .CodeMirror:not(.CodeMirror-focused) :is(.CodeMirror-activeline-background, .CodeMirror-activeline, .CodeMirror-selected),
+html[data-theme="dark"] .extensions__code .CodeMirror:not(.CodeMirror-focused) :is(.CodeMirror-activeline-background, .CodeMirror-activeline, .CodeMirror-selected) {
+  background: transparent !important;
+}
+/* CodeMirror also paints native selection on the line's nested spans. */
+.dark-theme .extensions__code ::selection,
+html[data-theme="dark"] .extensions__code ::selection,
+.dark-theme :is(.cm-s-solarized, .cm-s-lsradix).CodeMirror ::selection,
+html[data-theme="dark"] :is(.cm-s-solarized, .cm-s-lsradix).CodeMirror ::selection {
+  background: var(--od-code-selection) !important;
+  color: var(--od-text-bright) !important;
+}
+.dark-theme :is(.cm-s-solarized, .cm-s-lsradix).CodeMirror .CodeMirror-selectedtext,
+html[data-theme="dark"] :is(.cm-s-solarized, .cm-s-lsradix).CodeMirror .CodeMirror-selectedtext {
+  color: var(--od-text-bright) !important;
+}
+.dark-theme :is(.cm-s-solarized, .cm-s-lsradix) .CodeMirror-cursor,
+html[data-theme="dark"] :is(.cm-s-solarized, .cm-s-lsradix) .CodeMirror-cursor { border-left-color: var(--od-text) !important; }
+
+/* One Dark syntax palette. */
+.dark-theme :is(.cm-s-solarized, .cm-s-lsradix) .cm-comment,
+html[data-theme="dark"] :is(.cm-s-solarized, .cm-s-lsradix) .cm-comment { color: var(--od-muted) !important; font-style: italic; }
+.dark-theme :is(.cm-s-solarized, .cm-s-lsradix) .cm-keyword,
+html[data-theme="dark"] :is(.cm-s-solarized, .cm-s-lsradix) .cm-keyword { color: var(--od-purple) !important; }
+.dark-theme :is(.cm-s-solarized, .cm-s-lsradix) :is(.cm-operator, .cm-property, .cm-type),
+html[data-theme="dark"] :is(.cm-s-solarized, .cm-s-lsradix) :is(.cm-operator, .cm-property, .cm-type) { color: var(--od-cyan) !important; }
+.dark-theme :is(.cm-s-solarized, .cm-s-lsradix) :is(.cm-string, .cm-string-2),
+html[data-theme="dark"] :is(.cm-s-solarized, .cm-s-lsradix) :is(.cm-string, .cm-string-2) { color: var(--od-green) !important; }
+.dark-theme :is(.cm-s-solarized, .cm-s-lsradix) :is(.cm-number, .cm-atom, .cm-attribute),
+html[data-theme="dark"] :is(.cm-s-solarized, .cm-s-lsradix) :is(.cm-number, .cm-atom, .cm-attribute) { color: var(--od-orange) !important; }
+.dark-theme :is(.cm-s-solarized, .cm-s-lsradix) .cm-def,
+html[data-theme="dark"] :is(.cm-s-solarized, .cm-s-lsradix) .cm-def { color: var(--od-blue) !important; }
+.dark-theme :is(.cm-s-solarized, .cm-s-lsradix) :is(.cm-variable, .cm-variable-2, .cm-variable-3),
+html[data-theme="dark"] :is(.cm-s-solarized, .cm-s-lsradix) :is(.cm-variable, .cm-variable-2, .cm-variable-3) { color: var(--od-text) !important; }
+.dark-theme :is(.cm-s-solarized, .cm-s-lsradix) .cm-builtin,
+html[data-theme="dark"] :is(.cm-s-solarized, .cm-s-lsradix) .cm-builtin { color: var(--od-yellow) !important; }
+.dark-theme :is(.cm-s-solarized, .cm-s-lsradix) :is(.cm-tag, .cm-error),
+html[data-theme="dark"] :is(.cm-s-solarized, .cm-s-lsradix) :is(.cm-tag, .cm-error) { color: var(--od-red) !important; }
+.dark-theme :is(.cm-s-solarized, .cm-s-lsradix) .cm-error,
+html[data-theme="dark"] :is(.cm-s-solarized, .cm-s-lsradix) .cm-error { background: transparent !important; }
+/* Agenda compatibility */
+/* Agenda plugin compatibility: external-link records and the toolbar timer. */
+@font-face {
+  font-family: "One Dark Tomato";
+  src: url("./tomato-outline.woff2") format("woff2");
+  font-weight: 400;
+  unicode-range: U+1F345;
+}
+.dark-theme .external-link[href^="#agenda-pomo://"],
+html[data-theme="dark"] .external-link[href^="#agenda-pomo://"] {
+  /* The font replaces only Agenda's tomato emoji; its minutes stay text. */
+  font-family: "One Dark Tomato", var(--ls-font-family, Inter), "Segoe UI", sans-serif;
+  background-color: var(--od-raised) !important;
+  color: var(--od-text) !important;
+  border: 1px solid var(--od-green-border) !important;
+  border-radius: 5px;
+  padding: 1px 6px;
+  box-shadow: none !important;
+}
+.dark-theme .external-link[href^="#agenda-pomo://"] > .od-pomo-icon,
+html[data-theme="dark"] .external-link[href^="#agenda-pomo://"] > .od-pomo-icon {
+  position: relative;
+  top: -0.06em;
+  pointer-events: none;
+}
+.dark-theme .external-link[href^="#agenda-pomo://"]:hover,
+html[data-theme="dark"] .external-link[href^="#agenda-pomo://"]:hover {
+  background-color: var(--od-hover) !important;
+  color: var(--od-text-bright) !important;
+  border-color: var(--od-green-soft) !important;
+}
+.dark-theme .agenda-toolbar-pompdoro,
+html[data-theme="dark"] .agenda-toolbar-pompdoro {
+  color: var(--od-text) !important;
+  border-color: var(--od-border-strong) !important;
+  background-color: var(--od-bg) !important;
+  box-shadow: none !important;
+}
+.dark-theme .agenda-toolbar-pompdoro .timer-progress-back,
+html[data-theme="dark"] .agenda-toolbar-pompdoro .timer-progress-back {
+  background-color: #c678831a !important;
+}
+.dark-theme .agenda-toolbar-pompdoro.break,
+html[data-theme="dark"] .agenda-toolbar-pompdoro.break {
+  color: var(--od-green-soft) !important;
+  border-color: var(--od-green-border) !important;
+}
+.dark-theme .agenda-toolbar-pompdoro.break .timer-progress-back,
+html[data-theme="dark"] .agenda-toolbar-pompdoro.break .timer-progress-back {
+  background-color: #98c37921 !important;
+}
