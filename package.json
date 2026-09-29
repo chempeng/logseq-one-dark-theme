@@ -2,6 +2,8 @@
   "name": "logseq-one-dark-theme",
   "version": "0.1.0",
   "description": "An unofficial One Dark Pro theme for Logseq.",
+  "author": "chempeng",
+  "repo": "chempeng/logseq-one-dark-theme",
   "license": "MIT",
   "keywords": ["logseq", "logseq-theme", "one-dark", "dark-theme"],
   "title": "One Dark Pro",
